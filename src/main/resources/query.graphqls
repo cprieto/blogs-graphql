@@ -1,0 +1,20 @@
+type Blog {
+    id: ID!
+    name: String!
+    slug: String!
+    posts: [Post]
+}
+
+type Post {
+    id: ID!
+    title: String
+    content: String!
+    blog: Blog
+}
+
+type Query {
+    blog(id: ID!): Blog
+    blogs: [Blog]
+
+    post(id: ID!): Post
+}
