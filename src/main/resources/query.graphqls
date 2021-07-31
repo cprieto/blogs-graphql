@@ -2,19 +2,20 @@ type Blog {
     id: ID!
     name: String!
     slug: String!
-    posts: [Post]
+    posts: [Post!]!
 }
 
 type Post {
     id: ID!
     title: String
     content: String!
-    blog: Blog
+    blog: Blog!
 }
 
 type Query {
     blog(id: ID!): Blog
-    blogs: [Blog]
+    blogs: [Blog!]!
 
     post(id: ID!): Post
+    posts: [Post!]!
 }
