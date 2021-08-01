@@ -1,0 +1,21 @@
+input CreatePost {
+    title: String
+    content: String!
+    blogId: ID!
+}
+
+input CreateBlogPost {
+    title: String
+    content: String!
+}
+
+input CreateBlog {
+    name: String!
+    slug: String!
+    posts: [CreateBlogPost!]
+}
+
+type Mutation {
+    createBlog(input: CreateBlog!): Blog!
+    createPost(input: CreatePost!): Post!
+}
