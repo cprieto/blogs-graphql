@@ -1,0 +1,38 @@
+{
+  "data": {
+    "blogs": [
+      {
+        "name": "Some Blog",
+        "slug": "some-blog",
+        "posts": [
+          {
+            "title": "blog post for first blog",
+            "content": "latine iudicabit varius inimicus quis decore fabellas quem",
+            "viewCount": 0
+          },
+          {
+            "title": "another post for first blog",
+            "content": "disputationi ad fermentum leo quem dolorem",
+            "viewCount": 0
+          }
+        ]
+      },
+      {
+        "name": "Another Blog",
+        "slug": "another-blog",
+        "posts": [
+          {
+            "title": "third blog post",
+            "content": "ante vocibus comprehensam nullam vel nobis a sea",
+            "viewCount": 0
+          },
+          {
+            "title": null,
+            "content": "omittantur vero iusto fusce persius quas quas donec",
+            "viewCount": 0
+          }
+        ]
+      }
+    ]
+  }
+}

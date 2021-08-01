@@ -1,0 +1,62 @@
+{
+  "data": {
+    "posts": [
+      {
+        "title": "blog post for first blog",
+        "blog": {
+          "name": "Some Blog",
+          "posts": [
+            {
+              "title": "blog post for first blog"
+            },
+            {
+              "title": "another post for first blog"
+            }
+          ]
+        }
+      },
+      {
+        "title": "another post for first blog",
+        "blog": {
+          "name": "Some Blog",
+          "posts": [
+            {
+              "title": "blog post for first blog"
+            },
+            {
+              "title": "another post for first blog"
+            }
+          ]
+        }
+      },
+      {
+        "title": "third blog post",
+        "blog": {
+          "name": "Another Blog",
+          "posts": [
+            {
+              "title": "third blog post"
+            },
+            {
+              "title": null
+            }
+          ]
+        }
+      },
+      {
+        "title": null,
+        "blog": {
+          "name": "Another Blog",
+          "posts": [
+            {
+              "title": "third blog post"
+            },
+            {
+              "title": null
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

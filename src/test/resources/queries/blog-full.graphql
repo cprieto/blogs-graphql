@@ -1,0 +1,11 @@
+{
+    blogs {
+        name
+        slug
+        posts {
+            title
+            content
+            viewCount
+        }
+    }
+}

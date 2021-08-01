@@ -1,0 +1,8 @@
+{
+    post(id: "2") {
+        title
+        blog {
+            name
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    posts {
+        title
+        blog {
+            name
+            posts {
+                title
+            }
+        }
+    }
+}

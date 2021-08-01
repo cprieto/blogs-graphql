@@ -1,0 +1,28 @@
+{
+  "data": {
+    "blogs": [
+      {
+        "name": "Some Blog",
+        "posts": [
+          {
+            "title": "blog post for first blog"
+          },
+          {
+            "title": "another post for first blog"
+          }
+        ]
+      },
+      {
+        "name": "Another Blog",
+        "posts": [
+          {
+            "title": "third blog post"
+          },
+          {
+            "title": null
+          }
+        ]
+      }
+    ]
+  }
+}
