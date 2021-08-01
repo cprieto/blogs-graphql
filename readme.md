@@ -35,7 +35,7 @@ Spring Boot is a "it has all you need" option and what I am most familiar with, 
 
 I am really not a fan of Java as a language so every time I have to interact with the JVM I prefer to use [Kotlin](https://kotlinlang.org/), it is nicer and wrist friendly and 100% compatible with existing Java code.
 
-Kotlin has its own very opionated microservice framework, [Ktor](https://ktor.io), and I tried a small experiment with it and its very opionated data ORM [Exposed](https://github.com/JetBrains/Exposed) and [KGraphQL](https://kgraphql.io/) but after just a few hours playing with it I discovered they don't like each other (Exposed and KGraphQL) so I decided to stick to Spring Boot.
+Kotlin has its own very opinionated microservice framework, [Ktor](https://ktor.io), and I tried a small experiment with it and its very opinionated data ORM [Exposed](https://github.com/JetBrains/Exposed) and [KGraphQL](https://kgraphql.io/) but after just a few hours playing with it I discovered they don't like each other (Exposed and KGraphQL) so I decided to stick to Spring Boot.
 
 # Tests
 
@@ -45,6 +45,6 @@ The database is H2 in memory and initialized empty.
 
 # Data access
 
-Thanks to the support of JPA in Spring, chaning data source to a different database will be matter of using the correct JDBC driver and setting its configuration in the `resources/application.properties` file.
+Thanks to the support of JPA in Spring, changing data source to a different database will be matter of using the correct JDBC driver and setting its configuration in the `resources/application.properties` file.
 
 If you want to support other databases or strategies not supported by JPA (for example, blog posts in text files), you will have to create your own separate repository with the basic operations.
