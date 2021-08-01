@@ -48,3 +48,21 @@ The database is H2 in memory and initialized empty.
 Thanks to the support of JPA in Spring, changing data source to a different database will be matter of using the correct JDBC driver and setting its configuration in the `resources/application.properties` file.
 
 If you want to support other databases or strategies not supported by JPA (for example, blog posts in text files), you will have to create your own separate repository with the basic operations.
+
+# Tradeoffs
+
+There is no direct link between the GraphQL engine and the JPA query engine (in reality JPA is using Hibernate as its ORM system), this means we will face a few limitations:
+
+ - The generated queries are not optimized, for example, selecting _only_ the `name` field in a blog will issue a query for all its fields and not only the required field
+ - In the same kind of problem, with related queries is possible to hit the [SELECT N+1](https://vladmihalcea.com/n-plus-1-query-problem/) problem
+ - This problems could be potentially be fixed using a [DataFetcher](https://www.graphql-java.com/documentation/v11/data-fetching/) but this will require a lot more research and understand the internals of GraphQL Java kickstarter (it is somehow documented [here](https://www.graphql-java-kickstart.com/tools/))
+
+For speed of implementation I decided this tradeoffs will work for this MVP and initial release
+
+# Future improvements
+
+With enough time I will probably try to see if there is a better way to connect the data fetchers so the query itself could be optimized depending on the field requested by the GraphQL query.
+
+There is another problem with the way JPA sessions work, because of this handling [lazy loading](https://www.baeldung.com/hibernate-lazy-eager-loading) of properties is restricted (that is why there is no property named `posts`  in the `Blog` class), this could be solved with a custom Context class but for now it didn't worth the effort.
+
+Another big improvement will be generating the queries and mutations automatically, we already know all the details about each entity, so it could be possible to generate the graphql schema on the fly with all the accepted queries and mutations (from the JPA repository). This will require deeper knowledge about how the GraphQL kickstart works and hence more time to develop, but I am confident it should be possible. This will bring a total new flexibility to the way the entities can be queried and modified (or created).
