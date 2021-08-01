@@ -1,0 +1,10 @@
+mutation CREATE_SINGLE_BLOG {
+    createBlog(input: {
+        name: "Sample blog"
+        slug: "sample-blog"
+    }) {
+        id
+        name
+        slug
+    }
+}

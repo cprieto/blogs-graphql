@@ -5,21 +5,13 @@ import com.cprieto.exercises.data.BlogRepository
 import com.cprieto.exercises.data.Post
 import com.cprieto.exercises.data.PostRepository
 import com.graphql.spring.boot.test.GraphQLTestTemplate
-import io.micrometer.core.instrument.util.IOUtils
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.skyscreamer.jsonassert.JSONAssert
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.core.io.ClassPathResource
-import java.nio.charset.StandardCharsets
-
-fun String.test() = "queries/$this.graphql"
-fun String.response(): String = IOUtils.toString(ClassPathResource("queries/$this.json").inputStream, StandardCharsets.UTF_8)
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

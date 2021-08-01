@@ -1,0 +1,19 @@
+{
+  "data": {
+    "createBlog": {
+      "id": "1",
+      "name": "Sample blog",
+      "slug": "sample-blog",
+      "posts": [
+        {
+          "id": "2",
+          "title": "hello world"
+        },
+        {
+          "id": "3",
+          "title": "foo bar"
+        }
+      ]
+    }
+  }
+}

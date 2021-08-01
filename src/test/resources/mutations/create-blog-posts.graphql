@@ -1,0 +1,24 @@
+mutation CREATE_BLOG_WITH_POSTS {
+    createBlog(input: {
+        name: "Sample blog"
+        slug: "sample-blog"
+        posts: [
+            {
+                title: "hello world"
+                content: "some content here"
+            },
+            {
+                title: "foo bar"
+                content: "another content here"
+            }
+        ]
+    }) {
+        id
+        name
+        slug
+        posts {
+            id
+            title
+        }
+    }
+}
